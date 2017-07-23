@@ -22,4 +22,3 @@ version.bump
 Git.commit("Bumping version to #{version}")
 
 Git.push(:origin, :master)
-

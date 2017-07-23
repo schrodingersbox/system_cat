@@ -1,3 +1,5 @@
+require 'English'
+
 module SystemCat
   class Shell
 
@@ -15,7 +17,7 @@ module SystemCat
     end
 
     def self.exitstatus
-      $?.exitstatus
+      $CHILD_STATUS.exitstatus
     end
   end
 end
