@@ -23,4 +23,3 @@ Git.tag(version.to_s)
 version.bump
 
 Git.stash_apply unless status[:clean]
-
