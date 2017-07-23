@@ -5,18 +5,17 @@ module SystemCat
       puts '_______________________________________________________________________________'
       puts command
 
-      unless test
-        result = `#{command}`
-        puts result
-      end
+      return if test
 
+      result = `#{command}`
+      puts result
       raise 'Command failed' unless exitstatus.zero? || force
 
       return result
     end
 
     def self.exitstatus
-      $CHILD_STATUS.exitstatus
+      $?.exitstatus
     end
   end
 end
