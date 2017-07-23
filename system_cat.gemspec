@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/schrodingersbox/system_cat'
   s.require_path = ['lib']
 
-  s.add_dependency 'require_all'
+  s.add_dependency 'require_all', '~> 0'
 
   s.add_development_dependency 'rspec', '~> 3.0', '>= 3.0.0'
   s.add_development_dependency 'spec_cat', '~> 3.0', '>= 3.0.0'
