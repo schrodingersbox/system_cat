@@ -91,14 +91,12 @@ describe SystemCat::Version do
   #############################################################################
   # bump
 
-  describe '::bump' do
+  describe '#bump' do
 
-    it 'loads, increments, and saves the version' do
-      expect(version).to_not be_nil
-      expect(Version).to receive(:new).and_return(version)
+    it 'increments and saves the version' do
       expect(version).to receive(:increment).and_return(version)
       expect(version).to receive(:save).and_return(true)
-      expect(Version.bump).to be(true)
+      expect(version.bump).to be(true)
     end
   end
 end

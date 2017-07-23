@@ -29,8 +29,8 @@ module SystemCat
       return "#{major}.#{minor}.#{build}"
     end
 
-    def self.bump
-      return Version.new.increment.save
+    def bump
+      return increment.save
     end
   end
 end

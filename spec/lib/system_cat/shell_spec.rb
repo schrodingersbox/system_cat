@@ -26,5 +26,21 @@ describe SystemCat::Shell do
       expect(Shell).to receive(:exitstatus).and_return(21)
       expect { Shell.run(command) }.to raise_error('Command failed')
     end
+
+    context 'when force flag is true' do
+
+      it 'ignores errors' do
+        expect(Shell).to receive(:exitstatus).and_return(21)
+        expect { Shell.run(command, force: true) }.to_not raise_error
+      end
+    end
+
+    context 'when test flag is true' do
+
+      it 'does not actually execute the command' do
+        expect(Shell).to_not receive(:`)
+        Shell.run(command, test: true)
+      end
+    end
   end
 end

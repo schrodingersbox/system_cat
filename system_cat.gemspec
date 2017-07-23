@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Rich Humphrey']
   s.email       = 'rich@schrodingersbox.com'
   s.files       = Dir['lib/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.md']
-  s.homepage    = 'https://github.com/schrodingersbox/spec_cat'
+  s.homepage    = 'https://github.com/schrodingersbox/system_cat'
   s.require_path = ['lib']
 
   s.add_dependency 'require_all'

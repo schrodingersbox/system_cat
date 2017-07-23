@@ -9,10 +9,10 @@ describe 'rake system_cat tasks' do
     load 'lib/tasks/system_cat.rake'
   end
 
-  describe 'rake system_cat:dummy' do
+  describe 'rake system_cat:test' do
 
     it 'exists' do
-      @rake['system_cat:dummy'].invoke
+      @rake['system_cat:test'].invoke
     end
   end
 end

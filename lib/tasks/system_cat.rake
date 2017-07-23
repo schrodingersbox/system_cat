@@ -1,7 +1,7 @@
 namespace :system_cat do
 
-  desc 'Dummy'
-  task :dummy do
+  desc 'Test'
+  task :test do
     puts 'Hola dodo!'
   end
 end

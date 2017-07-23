@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require 'system_cat'
+
+include SystemCat
+
+TEST = true
+
+status = Git.status
+raise 'Not on master' unless status[:branch] == :master
+
+Git.stash unless status[:clean]
+Git.pull
+
+version = Version.new('config/version.txt')
+
+Shell.run('gem build system_cat.gemspec')
+Shell.run("gem push system_cat-#{version}.gem", test: test)
+
+Git.tag(version.to_s)
+version.bump
+
+Git.stash_apply unless status[:clean]
+
