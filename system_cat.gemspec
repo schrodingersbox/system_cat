@@ -6,7 +6,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'system_cat'
-  s.version     = SystemCat::VERSION
+  s.version     = SystemCat::Version.new.to_s
   s.date        = Date.today.to_s
   s.licenses    = ['MIT']
   s.summary     = 'Random collection of system tools'
@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
   s.files       = Dir['lib/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.md']
   s.homepage    = 'https://github.com/schrodingersbox/spec_cat'
   s.require_path = ['lib']
+
+  s.add_dependency 'require_all'
 
   s.add_development_dependency 'rspec', '~> 3.0', '>= 3.0.0'
   s.add_development_dependency 'spec_cat', '~> 3.0', '>= 3.0.0'

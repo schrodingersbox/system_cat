@@ -7,10 +7,27 @@ AllCops:
 Style/Documentation:
   Enabled: false
 
+Metrics/LineLength:
+  Max: 120
+
+# Prefer explicit returns
+
+Style/RedundantReturn:
+  Enabled: false
+
 # Prefer lighter and fluffier code
 
 Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
 Layout/EmptyLinesAroundModuleBody:
   Enabled: false
+
+# Barfing on spec blocks
+
+Metrics/BlockLength:
+  Enabled: false
+
