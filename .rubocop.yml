@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - 'Rakefile'
+    - 'system_cat.gemspec'
+    - 'bin/*'
+
+Style/Documentation:
+  Enabled: false
+
+# Prefer lighter and fluffier code
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
