@@ -120,7 +120,7 @@ describe SystemCat::Git do
   describe '::tag' do
 
     it 'shells git tag' do
-      expect(Shell).to receive(:run).with("git tag #{tag} && git push --tags")
+      expect(Shell).to receive(:run).with("git tag #{tag} && git push origin master --tags")
       Git.tag(tag)
     end
   end

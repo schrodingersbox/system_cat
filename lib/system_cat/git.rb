@@ -38,8 +38,8 @@ module SystemCat
       }
     end
 
-    def self.tag(tag)
-      Shell.run("git tag #{tag} && git push --tags")
+    def self.tag(tag, remote = :origin, branch = :master)
+      Shell.run("git tag #{tag} && git push #{remote} #{branch} --tags")
     end
   end
 end
