@@ -31,3 +31,8 @@ Layout/EmptyLinesAroundModuleBody:
 Metrics/BlockLength:
   Enabled: false
 
+# Legacy issue
+
+Style/MixinUsage:
+  Enabled: false
+

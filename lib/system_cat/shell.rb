@@ -3,6 +3,15 @@ require 'English'
 module SystemCat
   class Shell
 
+    def self.exec(command, test: false)
+      puts '_______________________________________________________________________________'
+      puts command
+
+      return if test
+
+      Kernel.exec(command)
+    end
+
     def self.run(command, force: false, test: false)
       puts '_______________________________________________________________________________'
       puts command

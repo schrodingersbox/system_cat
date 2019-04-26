@@ -9,6 +9,27 @@ describe SystemCat::Shell do
     allow(Shell).to receive(:`)
     allow(Shell).to receive(:puts)
     allow(Shell).to receive(:exitstatus).and_return(0)
+
+    allow(Kernel).to receive(:exec)
+  end
+
+  #############################################################################
+  # exec
+
+  describe '::exec' do
+
+    it 'executes the command and replaces the current process' do
+      expect(Kernel).to receive(:exec).with(command)
+      Shell.exec(command)
+    end
+
+    context 'when test flag is true' do
+
+      it 'does not actually execute the command' do
+        expect(Kernel).to_not receive(:exec).with(command)
+        Shell.exec(command, test: true)
+      end
+    end
   end
 
   #############################################################################

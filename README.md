@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/schrodingersbox/system_cat.svg?branch=master)](https://travis-ci.org/schrodingersbox/system_cat)
-[![Coverage Status](https://coveralls.io/repos/schrodingersbox/system_cat/badge.png?branch=master)](https://coveralls.io/r/schrodingersbox/system_cat?branch=master)
 [![Code Climate](https://codeclimate.com/github/schrodingersbox/system_cat.png)](https://codeclimate.com/github/schrodingersbox/system_cat)
 [![Dependency Status](https://gemnasium.com/schrodingersbox/system_cat.png)](https://gemnasium.com/schrodingersbox/system_cat)
 [![Gem Version](https://badge.fury.io/rb/system_cat.png)](http://badge.fury.io/rb/system_cat)
