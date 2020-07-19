@@ -28,6 +28,14 @@ describe SystemCat::Git do
       expect(Shell).to receive(:run).with('git commit -a -m "test"')
       Git.commit('test')
     end
+
+    context 'with no_verify option' do
+
+      it 'includes --no-verify' do
+        expect(Shell).to receive(:run).with('git commit -a -m "test" --no-verify')
+        Git.commit('test', no_verify: true)
+      end
+    end
   end
 
   #############################################################################

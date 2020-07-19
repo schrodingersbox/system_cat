@@ -5,8 +5,10 @@ module SystemCat
       Shell.run("git checkout #{branch}")
     end
 
-    def self.commit(message)
-      Shell.run(%(git commit -a -m "#{message}"))
+    def self.commit(message, options = {})
+      command = %(git commit -a -m "#{message}")
+      command << ' --no-verify' if options[:no_verify]
+      Shell.run(command)
     end
 
     def self.merge(branch)
