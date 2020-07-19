@@ -3,11 +3,12 @@ AllCops:
     - 'Rakefile'
     - 'system_cat.gemspec'
     - 'bin/*'
+  NewCops: disable
 
 Style/Documentation:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 # Prefer explicit returns
@@ -36,3 +37,7 @@ Metrics/BlockLength:
 Style/MixinUsage:
   Enabled: false
 
+# Annoying
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
